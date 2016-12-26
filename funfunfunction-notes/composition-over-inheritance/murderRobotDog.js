@@ -6,18 +6,18 @@
  * murderRobotDog   = driver + killer + barker
  */
 
-//Behaviours
+//Behaviors
 const barker = (state) => ({
     bark: () => console.log('Woof, I am ' + state.name)
-})
+});
 
 const driver = (state) => ({
     drive: () => state.position = state.position + state.speed
-})
+});
 
 const killer = (state) => ({
     kill: () => console.log('')
-})
+});
 
 const murderRobotDog = (name) => {
     const state = {
@@ -32,7 +32,7 @@ const murderRobotDog = (name) => {
         driver(state),
         killer(state)
     );
-}
+};
 
 barker({name: 'karo'}).bark();
 
